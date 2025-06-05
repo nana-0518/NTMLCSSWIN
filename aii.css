@@ -1,370 +1,229 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
-/* * {
-    outline: 1px solid gray
-} */
-
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-a {
+/*以上是reset*/
+
+a{
     text-decoration: none;
-    display: inline-block;
-    color: #000000;
 }
-
-img {
-    width: 100%;
-    height: auto;
-    vertical-align: middle;
+a:hover{
+    text-decoration: underline;
 }
-
-.wrap {
+h2{
+    color:blue;
+    font-size: 30px;
+    font-weight: 600;
+    margin:20px 10px;
+}
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px;
+}
+/*block1*/
+.block1{
     margin: 0 auto;
-    font-family: "Noto Sans TC", sans-serif;
-    font-weight: 500;
-    line-height: 1.5;
-    background: #fbfbfb;
+    max-width: 100%;
 }
-
-/* 最上方的 menu */
-.menu {
+.header{
     display: flex;
     justify-content: center;
 }
-
-.menu a {
-    font-size: 28px;
-    font-weight: 700;
-    padding: 24px 40px;
+.header a{
+    color:black;
+    margin:10px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 650;
 }
-
-.menu a:hover {
-    color: #00cc99;
+.header a:hover{
+    color:aquamarine;
+    text-decoration: none;
 }
-
-
-/* header 大圖自我介紹區 */
-.me {
+.news{
     display: flex;
-    align-items: center;
+    flex-direction: row;
 }
-
-.me img {
-    width: 50%;
-    height: 830px;
+.news img{
+    max-width: 50%;
 }
-
-.career {
-    color: #0027d5;
-    width: 50%;
-    height: 830px;
-    background-image: url(https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/Hero%20Section2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    padding: 200px 80px;
+.time{
+    margin-left: 13px;
+    margin-top: 10px;
 }
-
-.career h1 {
-    font-size: 120px;
-    font-weight: 900;
-    margin-bottom: 12px;
+.news a{
+    color:black;
+    margin:10px;
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 650;
 }
-
-.master {
-    font-size: 48px;
-    font-weight: 700;
+.news a:hover{
+    color:aquamarine;
+    text-decoration: none;
 }
-
-.me-intro {
-    display: flex;
-    align-items: center;
-    border: 1px solid #6c757d;
-}
-
-.me-intro img {
-    width: 49%;
-    aspect-ratio: 1.5/1;
-}
-
-.me-intro li {
-    width: 80%;
-    padding-left: 24px;
-}
-
-.me-intro .x {
-    padding: 0 8px;
-}
-
-@media (max-width: 1440px) {
-    .master {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
-@media (max-width: 992px) {
-    .me {
-        flex-direction: column;
-    }
-
-    .me img {
-        width: 100%;
-    }
-
-    .career {
-        width: 100%;
-        height: 50%;
-        padding: 24px 0 72px 24px;
-    }
-
-    .career h1 {
-        font-size: 100px;
-    }
-
-    .master {
-        font-size: 40px;
-    }
-
-    .me-intro {
-        flex-direction: column;
-    }
-
-    .me-intro img {
-        width: 100%;
-    }
-
-    .me-intro li {
-        width: 100%;
-        padding: 48px 12px;
-        margin: 0;
-    }
-}
-
-@media (max-width: 768px) {
-    .career h1 {
-        font-size: 90px;
-    }
-}
-
-/* main 卡片資訊區（含搜尋欄、頁碼） */
-main {
-    padding: 0 312px;
-    border: 1px solid #6c757d;
-}
-
-form {
-    display: flex;
-    align-items: center;
-    width: 33%;
-    border: 1px solid #6c757d;
-    border-radius: 40px;
-    padding: 0 16px;
-    margin-top: 80px;
-}
-
-.search-bar {
-    color: #4b4b4b;
-    padding: 16px;
-    outline: none;
-    border: none;
-    background: #fbfbfb;
-}
-
-.card-group {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 80px 15px;
-    margin: 40px 0;
-}
-
-.card-group .card {
-    width: 32%;
-}
-
-.card {
+.news-content{
     display: flex;
     flex-direction: column;
-}
-
-.card img {
-    height: 200px;
-    margin-bottom: 16px;
-}
-
-.date {
-    display: block;
-    margin-bottom: 4px;
-}
-
-.hashtag {
-    font-size: 24px;
-    color: #0027d5;
-    margin-right: 3px;
-    margin-bottom: 8px;
-}
-
-.hashtag:hover {
-    color: #00cc99;
-}
-
-.card h2 {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 8px;
-    flex-grow: 1;
-}
-
-.card-intro {
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 2;
-    overflow: hidden;
-    color: #4b4b4b;
-    margin-bottom: 16px;
-}
-
-.read-more {
-    color: #4b4b4b;
-    padding: 8px 16px;
-    border: 1px solid #4b4b4b;
-    border-radius: 40px;
-    width: 100px;
-}
-
-.read-more:hover {
-    color: #ffffff;
-    background: #00cc99;
-}
-
-.layout {
-    display: flex;
-    align-items: center;
-}
-
-.new,
-.popu {
-    font-weight: 700;
-    color: #ffffff;
-    background: #0027d5;
-    padding: 6px 12px;
-    border-radius: 40px;
-    margin-left: 5px;
-}
-
-.page {
-    display: flex;
     justify-content: center;
-    padding: 8px 20px;
-    margin-bottom: 80px;
 }
-
-.page a {
-    color: #4b4b4b;
-    padding: 10px;
-}
-
-.page a:hover {
-    color: #00cc99;
-}
-
-@media (max-width: 1440px) {
-    main {
-        padding: 0 100px;
-    }
-
-    form {
-        width: 50%;
-    }
-
-    .card-group .card {
-        width: 48%;
-    }
-}
-
-@media (max-width: 768px) {
-    main {
-        padding: 0 12px;
-        gap: 32px;
-    }
-
-    form {
-        width: 100%;
-        margin-top: 64px;
-    }
-
-    .card-group {
-        flex-direction: column;
-    }
-
-    .card-group .card {
-        width: 100%;
-    }
-
-    .page {
-        margin-bottom: 64px;
-    }
-}
-
-/* footer 聯絡我、版權聲明 */
-.contact {
+.tag{
     display: flex;
+    flex-direction: raw;
+}
+.tag a{
+    color: blue;
+    font-size: 25px;
+    font-weight: 400;
+}
+.badge p{
+    background-color:#0027D5;
+    color:white;
+    border-radius:40px;
+    padding:8px 12px;
+	margin-left:8px ;
+    margin-top: 15px;
+}
+/*block2*/
+.block2{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 300px;
+
+}
+.block2 p{
+    margin: 15px;
+    line-height: 30px;
+}
+.block2 ol{
+    margin: 15px;
+    list-style: decimal;
+}
+.block2 ul{
+    margin:15px;
+    list-style: disc;
+}
+.block2 li{
+    margin: 15px;
+}
+.block2 img{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.hint{
+    background-color:#E0E0E0;
+    color:black;
+    border-radius:40px;
+    padding:20px 30px;
+    margin: 15px;
+    font-weight: 600;
+}
+
+.btn-container{
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    padding: 80px 312px;
+    margin: 20px 0;
 }
+.btn a{
+    background-color:white;
+    color:black;
+    border-radius:40px;
+    padding:12px 20px;
+    border:1px solid black;
 
-.email {
-    font-size: 32px;
 }
-
-.email:hover {
-    color: #00cc99;
+.btn a:hover{
+    text-decoration: none;
+    background-color:blue;
+    color:white;
 }
-
-.sns {
+/*footer*/
+.footer{
+    max-width: 100%;
     display: flex;
-}
-
-.sns i {
-    color: #0027d5;
-    font-weight: 700;
-    font-size: 20px;
-    padding: 10px 12px;
-    display: inline-block;
-}
-
-.sns i:hover {
-    color: #00cc99;
-}
-
-.copyright {
+    flex-direction: column;
+    margin: 50px 100px;
     text-align: center;
-    background: #ffffff;
-    padding: 24px 0;
+}
+.footer-content{
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 30px;
 }
 
-@media(max-width: 1400px) {
-    .contact {
-        padding: 40px 100px;
-    }
+.email{
+    font-size: 30px;
+}
+.social-media{
+    display: flex;
+    flex-direction: row;
 }
 
-@media(max-width: 992px) {
-    .contact {
-        padding: 24px 100px;
-    }
-
-    .email {
-        font-size: 26px;
-    }
+.copyright{
+    margin-top: 30px;
 }
 
-@media (max-width: 768px) {
-    .contact {
-        display: none;
+@media (max-width:992px) {
+    .block2{
+        margin: 0 auto;
+    }
+    .footer{
+        margin: 0 auto;
+    }
+    .footer-content{
+        margin: 0 auto;
+        flex-direction: column;
     }
 }
